@@ -1,0 +1,28 @@
+Command line:
+   Digit_signal_gen_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49672
+
+Sat Apr 10 23:13:27 2021
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5150.53 Meg
+
+ Total Signals          : 16
+ Total Nets             : 49
+ Total Signal Drivers   : 9
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 4
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 534
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 5150.53 Meg
+
+Sat Apr 10 23:13:31 2021
+

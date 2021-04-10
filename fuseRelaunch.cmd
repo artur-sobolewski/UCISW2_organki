@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/artur/OneDrive/Pulpit/UCiSW_2/Projekt/Digit_signal_gen_tb_isim_beh.exe" -prj "C:/Users/artur/OneDrive/Pulpit/UCiSW_2/Projekt/Digit_signal_gen_tb_beh.prj" "work.Digit_signal_gen_tb" 
