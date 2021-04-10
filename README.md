@@ -1,1 +1,2 @@
-# UCISW2_organki
+# Projekt Układy cyfrowe i systemy wbudowane 2
+## Temat: Organki 
