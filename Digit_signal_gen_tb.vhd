@@ -92,9 +92,7 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-      wait for Clk_period*10;
-
-      Rdy <= '0', '1' after 100 ns, '0' after 120 ns;
+      Rdy <= '1';
 
       wait;
    end process;

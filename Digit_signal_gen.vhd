@@ -43,35 +43,24 @@ architecture Behavioral of Dec_sign_generator is
 
 	constant clks_delay : integer := 999;
 	signal clk_counter : integer := 0;
-	signal diff : STD_LOGIC_VECTOR (11 downto 0) := X"052";
-	signal var : STD_LOGIC_VECTOR (11 downto 0) := X"000";
-	signal isOn : STD_LOGIC := '0';
+	signal var : unsigned (11 downto 0) := X"000";
 	
 begin
 
-	process(Clk, Rdy)
+	Command <= "0011";
+	Address <= "0000";
+	
+	process(Clk)
 	begin
-		
-		if rising_edge(Rdy) then
-			if isOn = '1' then
-				isOn <= '0';
-				Start <= '0';
-			else
-				Command <= "0011";
-				Address <= "0000";
-				isOn <= '1';
-				Start <= '1';
-			end if;	
-		end if;
-		
-		if rising_edge(Clk) and isOn = '1' then
-		--TODO
-		--Wyd³u¿yæ 1000 razy
+			
+		if rising_edge(Clk) and Rdy = '1' then
 			if clk_counter < clks_delay then
 				clk_counter <= clk_counter + 1;
-			else 
+				Start <= '0';
+			else
+				Start <= '1';
 				if var < X"FAD" then
-					var <= std_logic_vector( unsigned(var) + unsigned(diff) );
+					var <=  var + 82;
 				else 
 					var <= X"000";
 				end if;
@@ -80,6 +69,6 @@ begin
 		end if;
 		
 	end process;
-	Data <= var;
+	Data <= STD_LOGIC_VECTOR(var);
 end Behavioral;
 
